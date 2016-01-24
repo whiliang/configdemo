@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.patterncat","org.springframework.cloud.zookeeper"})
+@ComponentScan(basePackages = {"com.patterncat"})
 public class ConfigdemoApplication {
 
 //    @Value("${spring.cloud.zookeeper.connectString}")
