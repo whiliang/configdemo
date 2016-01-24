@@ -1,5 +1,6 @@
 package com.patterncat.controller;
 
+import com.patterncat.service.ArchaiusZkConfig;
 import com.patterncat.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -17,8 +18,16 @@ public class DemoController {
     @Autowired
     DemoService demoService;
 
+    @Autowired
+    ArchaiusZkConfig archaiusZkConfig;
+
     @RequestMapping("/msg")
     String getMsgFromConfig(){
         return demoService.getMsg();
+    }
+
+    @RequestMapping("/msg2")
+    String getMsgDynamic(){
+        return archaiusZkConfig.getDynamicUpdate();
     }
 }

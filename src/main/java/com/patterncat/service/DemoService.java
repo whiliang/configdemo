@@ -14,7 +14,14 @@ public class DemoService {
     @Value("${msg:defaultMsg}")
     private String msg;
 
+    /**
+     * . 会被解析为/,即一个节点
+     * 详见 ZookeeperTreeCachePropertySource
+     */
+    @Value("${first.second:tree}")
+    private String tree;
+
     public String getMsg() {
-        return "Hello " + this.msg;
+        return "Hello " + this.msg + " " + this.tree;
     }
 }
