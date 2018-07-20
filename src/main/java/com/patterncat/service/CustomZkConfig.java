@@ -26,7 +26,7 @@ public class CustomZkConfig {
 
     @PostConstruct
     public void registerListener(){
-        String basePath = "/config/"+appName;
+        String basePath = "/gqhmt/"+appName;
         watchWholeTree(client,basePath);
     }
 

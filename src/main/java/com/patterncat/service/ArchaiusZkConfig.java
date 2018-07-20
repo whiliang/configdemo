@@ -26,7 +26,7 @@ public class ArchaiusZkConfig {
 
     @PostConstruct
     public void installZkConfig() throws Exception {
-        String zkConfigRootPath = "/config/"+appName;
+        String zkConfigRootPath = "/gqhmt/"+appName;
         ZooKeeperConfigurationSource zkConfigSource = new ZooKeeperConfigurationSource(client, zkConfigRootPath);
         zkConfigSource.start();
         DynamicWatchedConfiguration zkDynamicConfig = new DynamicWatchedConfiguration(zkConfigSource);
